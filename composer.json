@@ -13,7 +13,15 @@
     "authors": [
         {
             "name": "Jagu s.r.o.",
-            "email": "jagu@jagu.cz"
+            "email": "jagu@jagu.cz",
+            "homepage": "https://jagu.cz",
+            "role": "owner"
+        },
+        {
+            "name": "Marek Erben",
+            "email": "erben.marek@gmail.com",
+            "homepage": "https://marekerben.com",
+            "role": "developer"
         }
     ],
     "require": {
