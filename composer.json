@@ -1,0 +1,23 @@
+{
+    "name": "october/oc-jagu-mercurius-theme",
+    "type": "october-theme",
+    "description": "Jagu Mercurius Theme",
+    "keywords": [
+        "october",
+        "cms",
+        "theme",
+        "jagu",
+        "mercurius"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jagu s.r.o.",
+            "email": "jagu@jagu.cz"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.8",
+        "composer/installers": "~1.0"
+    }
+}
