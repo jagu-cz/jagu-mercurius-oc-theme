@@ -1,0 +1,89 @@
+.footer {
+    padding-bottom: 10px;
+    background-color: $footer-background-color;
+    color: $footer-text-color;
+
+    .copyright {
+        a {
+            font-weight: 600;
+        }
+    }
+
+    h4 {
+        color: $footer-text-color;
+    }
+
+    a {
+        color: $footer-text-color;
+
+        &:hover, &:active {
+            color: darken($footer-text-color, 25%);
+        }
+    }
+}
+
+
+.lh-35 {
+    line-height: 35px;
+}
+
+
+.logo {
+    color: $footer-text-color;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    span {
+        color: $primary-color;
+    }
+}
+
+.sub-form {
+    position: relative;
+
+    .form-control {
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        background: $light-grey;
+    }
+
+}
+
+.copyright {
+    background-color: $copyright-background-color;
+    color: $copyright-text-color;
+    font-size: smaller;
+
+    .copyright-text {
+        a {
+            color: $copyright-text-color;
+
+            &:hover, &:active {
+                color: darken($copyright-text-color, 25%);
+            }
+        }
+
+        .jagulogo-jagu-line {
+            &:before {
+                font-size: 150%;
+                margin: 0 5px;
+                top: 5px;
+                position: relative;
+                line-height: 0;
+            }
+        }
+    }
+
+    .footer-socials {
+        margin-bottom: 0;
+
+        li a {
+            margin-left: 15px;
+            color: $copyright-text-color;
+
+            &:hover, &:active {
+                color: darken($copyright-text-color, 25%);
+            }
+        }
+    }
+
+}

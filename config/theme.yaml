@@ -1,0 +1,164 @@
+tabs:
+    fields:
+
+        ####################################################
+        # Colors
+        ####################################################
+
+        # General colors section
+        colors_general_section:
+            tab: Colors
+            label: General
+            type: section
+        primary_color:
+            tab: Colors
+            label: Primary color
+            type: colorpicker
+            default: '#376FAD'
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            assetVar: 'primary-color'
+        secondary_color:
+            tab: Colors
+            label: Secondary color
+            type: colorpicker
+            default: '#F09125'
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            assetVar: 'secondary-color'
+        link_color:
+            tab: Colors
+            label: Link color
+            type: colorpicker
+            default: '#376FAD'
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            assetVar: 'link-color'
+        # Top bar section
+        colors_top_section:
+            tab: Colors
+            label: Top bar
+            type: section
+        top_text_color:
+            tab: Colors
+            label: Top bar text color
+            type: colorpicker
+            default: '#3B3C3D'
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            assetVar: 'top-text-color'
+        top_background_color:
+            tab: Colors
+            label: Top bar background color
+            type: colorpicker
+            default: '#FFFFFF'
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            assetVar: 'top-background-color'
+        # Header section
+        colors_header_section:
+            tab: Colors
+            label: Header
+            type: section
+        header_text_color:
+            tab: Colors
+            label: Header text color
+            type: colorpicker
+            default: '#3B3C3D'
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            assetVar: 'header-text-color'
+        header_background_color:
+            tab: Colors
+            label: Header background color
+            type: colorpicker
+            default: '#FFFFFF'
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            assetVar: 'header-background-color'
+        # Footer section
+        colors_footer_section:
+            tab: Colors
+            label: Footer
+            type: section
+        footer_text_color:
+            tab: Colors
+            label: Footer text color
+            type: colorpicker
+            default: '#F2F2F2'
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            assetVar: 'footer-text-color'
+        footer_background_color:
+            tab: Colors
+            label: Footer background color
+            type: colorpicker
+            default: '#3B3C3D'
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            assetVar: 'footer-background-color'
+        # Copyright section
+        colors_copyright_section:
+            tab: Colors
+            label: Copyright
+            type: section
+        copyright_text_color:
+            tab: Colors
+            label: copyright text color
+            type: colorpicker
+            default: '#F2F2F2'
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            assetVar: 'copyright-text-color'
+        copyright_background_color:
+            tab: Colors
+            label: Footer background color
+            type: colorpicker
+            default: '#2C2E2C'
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            assetVar: 'copyright-background-color'
+
+        ####################################################
+        # Quick contact
+        ####################################################
+
+        quick_contact_section:
+            tab: Quick contact
+            label: Quick contact
+            type: section
+
+        ####################################################
+        # Header
+        ####################################################
+
+        header_section:
+            tab: Header
+            label: Header
+            type: section
+
+        ####################################################
+        # Footer
+        ####################################################
+
+        footer_section:
+            tab: Footer
+            label: Footer
+            type: section
+
+        ####################################################
+        # Social media
+        ####################################################
+
+        social_media_section:
+            tab: Social media
+            label: Social media
+            type: section
+
+        social_media:
+            tab: Social media
+            prompt: Add social media
+            type: repeater
+            form:
+                fields:
+                    name:
+                        label: Name
+                        type: text
+                    icon:
+                        label: Icon
+                        comment: https://themify.me/themify-icons
+                        type: text
+                        span: left
+                    link:
+                        label: Link
+                        type: text
+                        span: right

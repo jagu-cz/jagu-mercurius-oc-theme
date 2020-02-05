@@ -1,0 +1,129 @@
+description = "Header with TopBar and Navigation"
+
+[staticMenu]
+code = "main-menu"
+
+[viewBag]
+==
+{% import _self as nav %}
+{% macro render_submenu(items) %}
+    {% import _self as nav %}
+    {% for item in items %}
+        {% if item.items %}
+            <li class="dropdown-submenu">
+                <a href="{{ item.url }}"
+                   data-toggle="dropdown"
+                   class="dropdown-item dropdown-toggle"
+                >
+                    {{ item.title }}
+                </a>
+                <ul class="dropdown-menu border-0 shadow">
+                    {{ nav.render_submenu(item.items) }}
+                </ul>
+            </li>
+        {% else %}
+            <li>
+                <a href="{{ item.url }}" class="dropdown-item">
+                    {{ item.title }}
+                </a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{# Header Start #}
+<header class="navigation">
+    <div class="header-top ">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                {% if this.theme.social_media %}
+                    <div class="col-lg-2 col-md-4">
+                        <div class="header-top-socials text-center text-lg-left text-md-left">
+                            {% for item in this.theme.social_media %}
+                                <a href="{{ item.link }}" target="_blank">
+                                    <i class="{{ item.icon }}"></i>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="{% if this.theme.social_media %}col-lg-10 col-md-8{% else %}col-lg-12{% endif %} text-center text-lg-right text-md-right">
+                    <div class="header-top-info">
+                        <a href="tel:+23-345-67890">
+                            <i class="fa fa-phone mr-2"></i>
+                            +23-345-67890
+                        </a>
+                        <a href="mailto:support@gmail.com">
+                            <i class="fa fa-envelope mr-2"></i>
+                            support@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg py-4 btco-hover-menu" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="{{ 'home'|page }}">
+                Mega<span>kit.</span>
+            </a>
+
+            <button class="navbar-toggler collapsed"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#main-menu"
+            >
+                <span class="fa fa-bars"></span>
+            </button>
+
+            <div id="main-menu" class="collapse navbar-collapse">
+                {% if staticMenu.menuItems %}
+                    <ul class="navbar-nav ml-auto">
+                        {% for item in staticMenu.menuItems %}
+                            {% if item.items %}
+                                <li class="nav-item dropdown level-one-dropdown">
+                                    <a href="{{ item.url }}"
+                                       data-toggle="dropdown"
+                                       class="nav-link dropdown-toggle"
+                                    >
+                                        {{ item.title }}
+                                    </a>
+                                    <ul class="dropdown-menu border-0 shadow">
+                                        {% for subitem in item.items %}
+                                            {% if subitem.items %}
+                                                <li class="dropdown-submenu">
+                                                    <a href="{{ subitem.url }}"
+                                                       data-toggle="dropdown"
+                                                       class="dropdown-item dropdown-toggle"
+                                                    >
+                                                        {{ subitem.title }}
+                                                    </a>
+                                                    <ul class="dropdown-menu border-0 shadow">
+                                                        {{ nav.render_submenu(subitem.items) }}
+                                                    </ul>
+                                                </li>
+                                            {% else %}
+                                                <li>
+                                                    <a href="{{ subitem.url }}" class="dropdown-item">
+                                                        {{ subitem.title }}
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                            {% else %}
+                                <li class="nav-item">
+                                    <a href="{{ item.url }}" class="nav-link">
+                                        {{ item.title }}
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+</header>
+{# Header Close #}
