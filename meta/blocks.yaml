@@ -64,9 +64,14 @@ headerimage:
                 'mb-3': Normal
                 'mb-4': Big
                 'mb-5': Bigger
+        rounded_button:
+            label: Rounded button
+            type: switch
+            span: left
         top_line:
             label: Show top line
             type: switch
+            span: right
 
 editor:
     name: Editor
@@ -77,7 +82,7 @@ editor:
             label: Editor
             type: section
         background:
-            label: Section Background Color
+            label: Section background color
             type: colorpicker
             availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
             span: left
@@ -155,6 +160,64 @@ banners:
                         type: richeditor
                         size: small
 
+banner:
+    name: Banner
+    description: Banner with simple text and button
+    icon: icon-flash
+    fields:
+        section:
+            label: Banner
+            type: section
+        appearance:
+            label: Appearance
+            type: balloon-selector
+            options:
+                'primary': Primary color
+                'secondary': Secondary color
+        secondary_text:
+            label: Secondary text
+            type: text
+        primary_text:
+            label: Primary text
+            type: text
+        button_text:
+            label: Button text
+            type: text
+            span: left
+        button_link:
+            label: Button link
+            type: text
+            span: right
+        background_image:
+            label: Background image
+            type: mediafinder
+            mode: image
+            imageWidth: 300
+        margin_top:
+            label: Margin top
+            comment: Top margin of the section
+            type: balloon-selector
+            span: left
+            options:
+                'pt-0': None
+                'pt-1': Smaller
+                'pt-2': Small
+                'pt-3': Normal
+                'pt-4': Big
+                'pt-5': Bigger
+        margin_bottom:
+            label: Margin bottom
+            comment: Bottom margin of the section
+            type: balloon-selector
+            span: right
+            options:
+                'pb-0': None
+                'pb-1': Smaller
+                'pb-2': Small
+                'pb-3': Normal
+                'pb-4': Big
+                'pb-5': Bigger
+
 button:
     name: Button
     description: Button
@@ -226,7 +289,12 @@ button:
         background:
             label: Background color
             type: colorpicker
+            span: left
             availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+        rounded:
+            label: Rounded button
+            type: switch
+            span: right
 
 cards:
     name: Cards
@@ -325,7 +393,7 @@ imagebar:
             type: number
             comment: In pixels
         background:
-            label: Section Background Color
+            label: Section background color
             type: colorpicker
             availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
             span: left
@@ -366,9 +434,11 @@ imagebar:
                         type: mediafinder
                         mode: image
                         imageWidth: 300
+                        span: left
                     link:
                         label: Link
                         type: text
+                        span: right
 
 serviceslist:
     name: Services list
@@ -379,7 +449,7 @@ serviceslist:
             label: List of services
             type: section
         background:
-            label: Section Background Color
+            label: Section background color
             type: colorpicker
             availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
             span: left

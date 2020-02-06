@@ -11,7 +11,7 @@ description = "Header image"
                 >
                     <h1 class="mb-3">{{ data.title }}</h1>
                     <span>{{ data.description|raw }}</span>
-                    <a href="{{ data.button_link }}" class="btn btn-minor">
+                    <a href="{{ data.button_link }}" class="btn btn-minor {% if data.rounded_button %}btn-round-full{% endif %}">
                         {{ data.button_text }}
                         <i class="btn-icon fa fa-angle-right ml-2"></i>
                     </a>
