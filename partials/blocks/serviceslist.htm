@@ -1,0 +1,26 @@
+description = "Services list"
+
+[viewBag]
+==
+<section class="serviceslist {{ data.margin_top }} {{ data.margin_bottom }}"
+         style="background-color: {{ data.background }}"
+>
+    <div class="container">
+        <div class="row justify-content-center">
+            {% for group in data.groups %}
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="service-item my-3">
+                        <div class="service-item-image float-left"
+                             style="background-image: url('{{ group.image|media }}')"
+                        ></div>
+                        <ul class="{{ data.list_bullet_color }}">
+                            {% for service in group.services %}
+                                <li>{{ service.service }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+.cards {
+    .card {
+        .card-img-top {
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+        .card-subtitle {
+            color: $primary-color;
+            margin-bottom: .5rem;
+        }
+
+        .card-text {
+            p {
+                font-size: 80%;
+                line-height: 1.5;
+            }
+        }
+
+        &.bottom-line {
+            border-bottom: 2px solid $primary-color;
+        }
+    }
+}

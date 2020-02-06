@@ -227,3 +227,156 @@ button:
             label: Background color
             type: colorpicker
             availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+
+cards:
+    name: Cards
+    description: Cards with image and text
+    icon: icon-address-card-o
+    fields:
+        section:
+            label: Cards
+            type: section
+        background:
+            label: Background color
+            type: colorpicker
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+        margin_top:
+            label: Margin top
+            comment: Top margin of button
+            type: balloon-selector
+            span: left
+            options:
+                'pt-0': None
+                'pt-1': Smaller
+                'pt-2': Small
+                'pt-3': Normal
+                'pt-4': Big
+                'pt-5': Bigger
+        margin_bottom:
+            label: Margin bottom
+            comment: Bottom margin of button
+            type: balloon-selector
+            span: right
+            options:
+                'pb-0': None
+                'pb-1': Smaller
+                'pb-2': Small
+                'pb-3': Normal
+                'pb-4': Big
+                'pb-5': Bigger
+        aspect_ratio:
+            label: Images aspect ratio
+            type: balloon-selector
+            span: left
+            options:
+                '56.25%': '16:9'
+                '66.66%': '3:2'
+                '71.42%': '5:7'
+                '75%': '4:3'
+                '100%': '1:1'
+        bottom_line:
+            label: Show bottom line
+            type: switch
+            span: right
+        cards:
+            type: repeater
+            prompt: Add card
+            form:
+                fields:
+                    section:
+                        label: Card
+                        type: section
+                    title:
+                        label: Title
+                        type: text
+                        span: left
+                    subtitle:
+                        label: Subtitle
+                        type: text
+                        span: right
+                    description:
+                        label: Description
+                        type: richeditor
+                        size: small
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 300
+                    button_text:
+                        label: Button text
+                        type: text
+                        span: left
+                    button_link:
+                        label: Button link
+                        type: text
+                        span: right
+
+serviceslist:
+    name: Services list
+    description: List of services
+    icon: icon-list-ul
+    fields:
+        section:
+            label: List of services
+            type: section
+        background:
+            label: Section Background Color
+            type: colorpicker
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            span: left
+        list_bullet_color:
+            label: Color of list bullets
+            type: balloon-selector
+            span: right
+            options:
+                'primary': Primary color
+                'secondary': Secondary color
+        margin_top:
+            label: Margin top
+            comment: Top margin of button
+            type: balloon-selector
+            span: left
+            options:
+                'pt-0': None
+                'pt-1': Smaller
+                'pt-2': Small
+                'pt-3': Normal
+                'pt-4': Big
+                'pt-5': Bigger
+        margin_bottom:
+            label: Margin bottom
+            comment: Bottom margin of button
+            type: balloon-selector
+            span: right
+            options:
+                'pb-0': None
+                'pb-1': Smaller
+                'pb-2': Small
+                'pb-3': Normal
+                'pb-4': Big
+                'pb-5': Bigger
+        groups:
+            type: repeater
+            prompt: Add group
+            form:
+                fields:
+                    section:
+                        label: Group of services
+                        type: section
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 300
+                    services:
+                        type: repeater
+                        prompt: Add service
+                        form:
+                            fields:
+                                section:
+                                    label: Service
+                                    type: section
+                                service:
+                                    label: Service
+                                    type: text
