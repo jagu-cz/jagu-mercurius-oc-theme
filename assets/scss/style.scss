@@ -10,8 +10,11 @@
 
 @import 'main.scss';
 
+// site partials
 @import 'templates/navigation.scss';
-
 @import 'templates/footer.scss';
+
+// blocks
+@import 'templates/headerimage.scss';
 
 @import 'templates/responsive.scss';

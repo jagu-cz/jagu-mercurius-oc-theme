@@ -5,6 +5,7 @@ code = "main-menu"
 
 [viewBag]
 ==
+{# Header #}
 {% import _self as nav %}
 {% macro render_submenu(items) %}
     {% import _self as nav %}
@@ -30,8 +31,6 @@ code = "main-menu"
         {% endif %}
     {% endfor %}
 {% endmacro %}
-
-{# Header Start #}
 <header class="navigation">
     {% if this.theme.social_media or this.theme.quick_contact_email or this.theme.quick_contact_phone %}
         <div class="header-top ">

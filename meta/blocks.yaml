@@ -1,0 +1,69 @@
+headerimage:
+    name: Header image
+    description: Header image with big background image and leading text
+    icon: icon-picture-o
+    fields:
+        section:
+            label: Header image
+            type: section
+        image:
+            label: Background image
+            type: mediafinder
+            mode: image
+            imageWidth: 300
+        title:
+            label: Title
+            type: text
+        description:
+            label: Description
+            type: richeditor
+            size: small
+        button_text:
+            label: Button text
+            type: text
+            span: left
+        button_link:
+            label: Button link
+            type: text
+            span: right
+        width:
+            label: Width of text block
+            comment: In percent
+            type: number
+            span: left
+        alignment:
+            label: Alignment
+            comment: Horizontal alignment of text block
+            type: balloon-selector
+            span: right
+            options:
+                'justify-content-start': Left
+                'justify-content-center': Center
+                'justify-content-end': Right
+        margin_top:
+            label: Top Margin
+            comment: Top margin of block
+            type: balloon-selector
+            span: left
+            options:
+                'mt-0': None
+                'mt-1': Smaller
+                'mt-2': Small
+                'mt-3': Normal
+                'mt-4': Big
+                'mt-5': Bigger
+        margin_bottom:
+            label: Bottom Margin
+            comment: Bottom margin of text block
+            type: balloon-selector
+            span: right
+            options:
+                'mb-0': None
+                'mb-1': Smaller
+                'mb-2': Small
+                'mb-3': Normal
+                'mb-4': Big
+                'mb-5': Bigger
+        top_line:
+            label: Show top line
+            type: switch

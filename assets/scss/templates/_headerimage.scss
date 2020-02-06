@@ -1,0 +1,77 @@
+$constant: 3;
+
+.headerimage {
+    background-image: url("https://placehold.it/1592x862");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    position: relative;
+
+    .block {
+        background-color: rgba(0, 0, 0, 0.6);
+
+        h1 {
+            font-weight: 600;
+            color: $light;
+        }
+
+        p {
+            color: darken($light, 20%);
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        span {
+            letter-spacing: 1px;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &.top-line {
+            border-top: 3px solid $secondary-color;
+        }
+
+        &.mt-1 {
+            margin-top: $constant * 1rem !important;
+        }
+
+        &.mt-2 {
+            margin-top: $constant * 2rem !important;
+        }
+
+        &.mt-3 {
+            margin-top: $constant * 3rem !important;
+        }
+
+        &.mt-4 {
+            margin-top: $constant * 4rem !important;
+        }
+
+        &.mt-5 {
+            margin-top: $constant * 5rem !important;
+        }
+
+        &.mb-1 {
+            margin-bottom: $constant * 1rem !important;
+        }
+
+        &.mb-2 {
+            margin-bottom: $constant * 2rem !important;
+        }
+
+        &.mb-3 {
+            margin-bottom: $constant * 3rem !important;
+        }
+
+        &.mb-4 {
+            margin-bottom: $constant * 4rem !important;
+        }
+
+        &.mb-5 {
+            margin-bottom: $constant * 5rem !important;
+        }
+    }
+}

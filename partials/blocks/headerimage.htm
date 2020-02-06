@@ -1,0 +1,22 @@
+description = "Header image"
+
+[viewBag]
+==
+<section class="headerimage" style="background-image: url('{{ data.image|media }}')">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex {{ data.alignment }}">
+                <div class="block p-4 {{ data.margin_top }} {{ data.margin_bottom }} {% if data.top_line %}top-line{% endif %}"
+                     style="width: {{ data.width }}%"
+                >
+                    <h1 class="mb-3">{{ data.title }}</h1>
+                    <span>{{ data.description|raw }}</span>
+                    <a href="{{ data.button_link }}" class="btn btn-minor">
+                        {{ data.button_text }}
+                        <i class="btn-icon fa fa-angle-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
