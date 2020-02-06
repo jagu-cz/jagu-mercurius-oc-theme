@@ -94,3 +94,64 @@ banners:
                         label: Description
                         type: richeditor
                         size: small
+
+button:
+    name: Button
+    description: Button
+    icon: icon-hand-pointer-o
+    fields:
+        section:
+            label: Button
+            type: section
+        text:
+            label: Text
+            type: text
+        link:
+            label: Link
+            type: text
+            span: left
+        icon:
+            label: Icon
+            type: text
+            span: right
+            comment: https://themify.me/themify-icons
+        appearance:
+            label: Appearance
+            type: balloon-selector
+            span: left
+            options:
+                'btn-main': Primary color
+                'btn-minor': Secondary color
+        size:
+            label: Size
+            type: balloon-selector
+            span: right
+            options:
+                'btn-sm': Small
+                '': Normal
+                'btn-lg': Big
+        alignment:
+            label: Alignment
+            comment: Horizontal alignment of button
+            type: balloon-selector
+            span: left
+            options:
+                'justify-content-start': Left
+                'justify-content-center': Center
+                'justify-content-end': Right
+        margin:
+            label: Margin
+            comment: Vertical margin
+            type: balloon-selector
+            span: right
+            options:
+                'my-0': None
+                'my-1': Smaller
+                'my-2': Small
+                'my-3': Normal
+                'my-4': Big
+                'my-5': Bigger
+        background:
+            label: Background color
+            type: colorpicker
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']

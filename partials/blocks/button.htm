@@ -1,0 +1,14 @@
+description = "Button"
+
+[viewBag]
+==
+<section class="button" style="background-color: {{ data.background }}">
+    <div class="container d-flex justify-content-center">
+        <a role="button" class="btn {{ data.size }} {{ data.appearance }} {{ data.margin }}" href="{{ data.link }}">
+            {% if data.icon %}
+                <i class="{{ data.icon }}"></i>
+            {% endif %}
+            {{ data.text }}
+        </a>
+    </div>
+</section>
