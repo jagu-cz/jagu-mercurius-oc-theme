@@ -33,39 +33,48 @@ code = "main-menu"
 
 {# Header Start #}
 <header class="navigation">
-    <div class="header-top ">
-        <div class="container">
-            <div class="row justify-content-between align-items-center">
-                {% if this.theme.social_media %}
-                    <div class="col-lg-2 col-md-4">
-                        <div class="header-top-socials text-center text-lg-left text-md-left">
-                            {% for item in this.theme.social_media %}
-                                <a href="{{ item.link }}" target="_blank">
-                                    <i class="{{ item.icon }}"></i>
-                                </a>
-                            {% endfor %}
+    {% if this.theme.social_media or this.theme.quick_contact_email or this.theme.quick_contact_phone %}
+        <div class="header-top ">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    {% if this.theme.social_media %}
+                        <div class="{% if this.theme.quick_contact_email or this.theme.quick_contact_phone %}col-lg-2 col-md-4{% else %}col-lg-12{% endif %}">
+                            <div class="header-top-socials text-center text-lg-left text-md-left">
+                                {% for item in this.theme.social_media %}
+                                    <a href="{{ item.link }}" target="_blank">
+                                        <i class="{{ item.icon }}"></i>
+                                    </a>
+                                {% endfor %}
+                            </div>
                         </div>
-                    </div>
-                {% endif %}
-                <div class="{% if this.theme.social_media %}col-lg-10 col-md-8{% else %}col-lg-12{% endif %} text-center text-lg-right text-md-right">
-                    <div class="header-top-info">
-                        <a href="tel:+23-345-67890">
-                            <i class="fa fa-phone mr-2"></i>
-                            +23-345-67890
-                        </a>
-                        <a href="mailto:support@gmail.com">
-                            <i class="fa fa-envelope mr-2"></i>
-                            support@gmail.com
-                        </a>
-                    </div>
+                    {% endif %}
+                    {% if this.theme.quick_contact_email or this.theme.quick_contact_phone %}
+                        <div class="{% if this.theme.social_media %}col-lg-10 col-md-8{% else %}col-lg-12{% endif %} text-center text-lg-right text-md-right">
+                            <div class="header-top-info">
+                                <a href="tel:{{ this.theme.quick_contact_phone }}">
+                                    <i class="fa fa-phone mr-2"></i>
+                                    {{ this.theme.quick_contact_phone }}
+                                </a>
+                                <a href="mailto:{{ this.theme.quick_contact_email }}">
+                                    <i class="fa fa-envelope mr-2"></i>
+                                    {{ this.theme.quick_contact_email }}
+                                </a>
+                            </div>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
-    </div>
+    {% endif %}
     <nav class="navbar navbar-expand-lg py-4 btco-hover-menu" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="{{ 'home'|page }}">
-                Mega<span>kit.</span>
+            <a class="navbar-brand" href="/">
+                {% if this.theme.header_logo_image %}
+                    <img src="{{ this.theme.header_logo_image|media }}" height="{{ this.theme.header_logo_image_height }}" alt="Logo">
+                {% endif %}
+                {% if this.theme.header_logo_text %}
+                    {{ this.theme.header_logo_text }}
+                {% endif %}
             </a>
 
             <button class="navbar-toggler collapsed"

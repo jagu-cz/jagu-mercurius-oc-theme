@@ -116,6 +116,14 @@ tabs:
             tab: Quick contact
             label: Quick contact
             type: section
+        quick_contact_email:
+            tab: Quick contact
+            label: E-mail
+            type: email
+        quick_contact_phone:
+            tab: Quick contact
+            label: Phone
+            type: text
 
         ####################################################
         # Header
@@ -125,6 +133,22 @@ tabs:
             tab: Header
             label: Header
             type: section
+        header_logo_image:
+            tab: Header
+            label: Logo
+            type: mediafinder
+            mode: image
+            imageWidth: 300
+        header_logo_image_height:
+            tab: Header
+            label: Logo height
+            comment: In pixels
+            type: number
+            default: 60
+        header_logo_text:
+            tab: Header
+            label: Text
+            type: text
 
         ####################################################
         # Footer
