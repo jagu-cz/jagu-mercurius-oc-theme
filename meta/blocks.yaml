@@ -68,6 +68,66 @@ headerimage:
             label: Show top line
             type: switch
 
+editor:
+    name: Editor
+    description: Editor
+    icon: icon-files-o
+    fields:
+        section:
+            label: Editor
+            type: section
+        background:
+            label: Section Background Color
+            type: colorpicker
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            span: left
+        margin_top:
+            label: Margin top
+            comment: Top margin of button
+            type: balloon-selector
+            span: left
+            options:
+                'pt-0': None
+                'pt-1': Smaller
+                'pt-2': Small
+                'pt-3': Normal
+                'pt-4': Big
+                'pt-5': Bigger
+        margin_bottom:
+            label: Margin bottom
+            comment: Bottom margin of button
+            type: balloon-selector
+            span: right
+            options:
+                'pb-0': None
+                'pb-1': Smaller
+                'pb-2': Small
+                'pb-3': Normal
+                'pb-4': Big
+                'pb-5': Bigger
+        editors:
+            type: repeater
+            prompt: Add Content
+            form:
+                fields:
+                    section:
+                        label: Content
+                        type: section
+                    size:
+                        label: Editor Size
+                        type: balloon-selector
+                        span: full
+                        options:
+                            col-lg-12 col-md-12: Full Width
+                            col-lg-6 col-md-12: 1/2 Width
+                            col-lg-4 col-md-12: 1/3 Width
+                            col-lg-3 col-md-12: 1/4 Width
+                    editor:
+                        label: Editor
+                        type: richeditor
+                        size: large
+                        span: full
+
 banners:
     name: Banners
     description: Banners with short texts
@@ -106,51 +166,63 @@ button:
         text:
             label: Text
             type: text
+            span: left
         link:
             label: Link
             type: text
-            span: left
+            span: right
         icon:
             label: Icon
             type: text
-            span: right
+            span: left
             comment: https://themify.me/themify-icons
         appearance:
             label: Appearance
             type: balloon-selector
-            span: left
+            span: right
             options:
                 'btn-main': Primary color
                 'btn-minor': Secondary color
         size:
             label: Size
             type: balloon-selector
-            span: right
+            span: left
             options:
                 'btn-sm': Small
                 '': Normal
                 'btn-lg': Big
         alignment:
             label: Alignment
-            comment: Horizontal alignment of button
             type: balloon-selector
-            span: left
+            span: right
             options:
                 'justify-content-start': Left
                 'justify-content-center': Center
                 'justify-content-end': Right
-        margin:
-            label: Margin
-            comment: Vertical margin
+        margin_top:
+            label: Margin top
+            comment: Top margin of button
+            type: balloon-selector
+            span: left
+            options:
+                'mt-0': None
+                'mt-1': Smaller
+                'mt-2': Small
+                'mt-3': Normal
+                'mt-4': Big
+                'mt-5': Bigger
+        margin_bottom:
+            label: Margin bottom
+            comment: Bottom margin of button
             type: balloon-selector
             span: right
             options:
-                'my-0': None
-                'my-1': Smaller
-                'my-2': Small
-                'my-3': Normal
-                'my-4': Big
-                'my-5': Bigger
+                'mb-0': None
+                'mb-1': Smaller
+                'mb-2': Small
+                'mb-3': Normal
+                'mb-4': Big
+                'mb-5': Bigger
         background:
             label: Background color
             type: colorpicker

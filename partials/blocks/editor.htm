@@ -1,0 +1,17 @@
+description = "Editor"
+
+[viewBag]
+==
+<section class="editor {{ data.margin_top }} {{ data.margin_bottom }}" style="background-color: {{ data.background }};">
+    <div class="container">
+        <div class="row">
+            {% for editor in data.editors %}
+                {% set size = 'col-lg-12 col-md-12' %}
+                {% if editor.size %}{% set size = editor.size %}{% endif %}
+                <div class="{{ size }}">
+                    {{ editor.editor|raw }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
