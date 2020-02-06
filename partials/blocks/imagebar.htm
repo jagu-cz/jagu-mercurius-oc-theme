@@ -1,0 +1,19 @@
+description = "Image bar"
+
+[viewBag]
+==
+<section class="imagebar {{ data.margin_top }} {{ data.margin_bottom }}"
+         style="background-color: {{ data.background }}"
+>
+    <div class="container">
+        <div class="row justify-content-around">
+            {% for image in data.images %}
+                <div class="col-lg-2 col-md-3 col-sm-6 d-flex justify-content-center">
+                    <a {% if image.link %}href="{{ image.link }}"{% endif %}>
+                        <img src="{{ image.image|media }}" height="{{ data.max_height }}px">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

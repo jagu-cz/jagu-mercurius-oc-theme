@@ -1,0 +1,17 @@
+.imagebar {
+    a {
+        img {
+            filter: grayscale(100%);
+            -webkit-transition: .3s -webkit-filter linear;
+            -moz-transition: .3s -moz-filter linear;
+            -moz-transition: .3s filter linear;
+            -ms-transition: .3s -ms-filter linear;
+            -o-transition: .3s -o-filter linear;
+            transition: .3s filter linear, .3s -webkit-filter linear;
+
+            &:hover {
+                filter: grayscale(0%);
+            }
+        }
+    }
+}

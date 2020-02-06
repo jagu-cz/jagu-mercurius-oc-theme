@@ -15,11 +15,12 @@
 @import 'templates/footer.scss';
 
 // blocks
-@import 'templates/headerimage.scss';
-@import 'templates/banners.scss';
-@import 'templates/button.scss';
-@import 'templates/editor.scss';
-@import 'templates/serviceslist.scss';
-@import 'templates/cards.scss';
+@import 'blocks/headerimage.scss';
+@import 'blocks/banners.scss';
+@import 'blocks/button.scss';
+@import 'blocks/editor.scss';
+@import 'blocks/serviceslist.scss';
+@import 'blocks/cards.scss';
+@import 'blocks/imagebar.scss';
 
 @import 'templates/responsive.scss';

@@ -312,6 +312,64 @@ cards:
                         type: text
                         span: right
 
+imagebar:
+    name: Image bar
+    description: Bar of images
+    icon: icon-file-image-o
+    fields:
+        section:
+            label: Image bar
+            type: section
+        max_height:
+            label: Max height of images
+            type: number
+            comment: In pixels
+        background:
+            label: Section Background Color
+            type: colorpicker
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            span: left
+        margin_top:
+            label: Margin top
+            comment: Top margin of button
+            type: balloon-selector
+            span: left
+            options:
+                'pt-0': None
+                'pt-1': Smaller
+                'pt-2': Small
+                'pt-3': Normal
+                'pt-4': Big
+                'pt-5': Bigger
+        margin_bottom:
+            label: Margin bottom
+            comment: Bottom margin of button
+            type: balloon-selector
+            span: right
+            options:
+                'pb-0': None
+                'pb-1': Smaller
+                'pb-2': Small
+                'pb-3': Normal
+                'pb-4': Big
+                'pb-5': Bigger
+        images:
+            type: repeater
+            prompt: Add image
+            form:
+                fields:
+                    section:
+                        label: Image
+                        type: section
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 300
+                    link:
+                        label: Link
+                        type: text
+
 serviceslist:
     name: Services list
     description: List of services

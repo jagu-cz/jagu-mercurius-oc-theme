@@ -8,7 +8,7 @@ description = "Cards"
     <div class="container">
         <div class="row">
             {% for card in data.cards %}
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
                     <div class="card h-100 {% if data.bottom_line %}bottom-line{% endif %}">
                         <div class="card-img-top"
                              style="background-image: url('{{ card.image|media }}'); padding-bottom: {{ data.aspect_ratio }}"
