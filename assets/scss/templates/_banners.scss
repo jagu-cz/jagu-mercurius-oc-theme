@@ -1,0 +1,42 @@
+.banners {
+    &.primary {
+        color: $light;
+        background-color: $primary-color;
+
+        .container {
+            .row {
+                .col {
+                    &.darker {
+                        background-color: darken($primary-color, 5%);
+                    }
+                }
+            }
+        }
+    }
+
+    &.secondary {
+        color: $light;
+        background-color: $secondary-color;
+
+        .container {
+            .row {
+                .col {
+                    &.darker {
+                        background-color: darken($secondary-color, 5%);
+                    }
+                }
+            }
+        }
+    }
+
+    h5, p {
+        text-align: center;
+        color: $light;
+    }
+
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

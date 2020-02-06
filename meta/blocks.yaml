@@ -67,3 +67,30 @@ headerimage:
         top_line:
             label: Show top line
             type: switch
+
+banners:
+    name: Banners
+    description: Banners with short texts
+    icon: icon-th-large
+    fields:
+        section:
+            label: Banners
+            type: section
+        appearance:
+            label: Appearance
+            type: balloon-selector
+            options:
+                'primary': Primary color
+                'secondary': Secondary color
+        banners:
+            type: repeater
+            prompt: Add banner
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    description:
+                        label: Description
+                        type: richeditor
+                        size: small

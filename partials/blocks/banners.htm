@@ -1,0 +1,18 @@
+description = "Banners"
+
+[viewBag]
+==
+<section class="banners {{ data.appearance }}">
+    <div class="container">
+        <div class="row">
+            {% for index, banner in data.banners %}
+                <div class="col {% if index is even %}darker{% endif %}">
+                    <div class="p-3">
+                        <h5>{{ banner.title }}</h5>
+                        <span>{{ banner.description|raw }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
