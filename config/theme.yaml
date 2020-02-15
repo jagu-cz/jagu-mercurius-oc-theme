@@ -5,6 +5,19 @@ tabs:
         # Colors
         ####################################################
 
+        general_section:
+            tab: General
+            label: General
+            type: section
+        company_name:
+            tab: General
+            label: Company name
+            type: text
+
+        ####################################################
+        # Colors
+        ####################################################
+
         # General colors section
         colors_general_section:
             tab: Colors
@@ -109,23 +122,6 @@ tabs:
             assetVar: 'copyright-background-color'
 
         ####################################################
-        # Quick contact
-        ####################################################
-
-        quick_contact_section:
-            tab: Quick contact
-            label: Quick contact
-            type: section
-        quick_contact_email:
-            tab: Quick contact
-            label: E-mail
-            type: email
-        quick_contact_phone:
-            tab: Quick contact
-            label: Phone
-            type: text
-
-        ####################################################
         # Header
         ####################################################
 
@@ -186,3 +182,59 @@ tabs:
                         label: Link
                         type: text
                         span: right
+
+        ####################################################
+        # Quick contact
+        ####################################################
+
+        quick_contact_section:
+            tab: Quick contact
+            label: Quick contact
+            type: section
+        quick_contact_title:
+            tab: Quick contact
+            label: Title
+            type: text
+        quick_contact_address_company_full_name:
+            tab: Quick contact
+            label: Company full nane
+            type: text
+            span: left
+        quick_contact_address_street:
+            tab: Quick contact
+            label: Street
+            type: text
+            span: right
+        quick_contact_address_city:
+            tab: Quick contact
+            label: City
+            type: text
+            span: left
+        quick_contact_address_zip:
+            tab: Quick contact
+            label: ZIP code
+            type: text
+            span: right
+        quick_contact_email:
+            tab: Quick contact
+            label: E-mail
+            type: email
+            span: left
+        quick_contact_phone:
+            tab: Quick contact
+            label: Phone
+            type: text
+            span: right
+
+        ####################################################
+        # Contact form
+        ####################################################
+
+        contact_form_section:
+            tab: Contact form
+            label: Contact form
+            type: section
+        contact_form_title:
+            tab: Contact form
+            label: Title
+            type: text

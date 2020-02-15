@@ -20,6 +20,32 @@
             color: darken($footer-text-color, 25%);
         }
     }
+
+    .materialize {
+        .input-field {
+            margin-top: 0;
+
+            > label {
+                color: $footer-text-color;
+            }
+        }
+
+        input[type=text]:not(.browser-default),
+        textarea.materialize-textarea {
+            color: $footer-text-color;
+            border-bottom: 1px solid $footer-text-color;
+
+            &:focus:not([readonly]) {
+                border-bottom: 1px solid $secondary-color;
+                -webkit-box-shadow: 0 1px 0 0 $secondary-color;
+                box-shadow: 0 1px 0 0 $secondary-color;
+
+                + label {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
 }
 
 

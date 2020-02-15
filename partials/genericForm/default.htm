@@ -1,0 +1,42 @@
+<form data-request="{{ __SELF__ }}::onFormSubmit">
+
+    {{ form_token() }}
+
+    <div id="{{ __SELF__ }}_forms_flash"></div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="materialize">
+                <div class="input-field">
+                    <input id="name" name="name" type="text">
+                    <label for="name">{{ 'Vaše jméno'|_ }}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="materialize">
+                <div class="input-field">
+                    <input id="email" name="email" type="text">
+                    <label for="email">{{ 'Váš e-mail'|_ }}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="materialize">
+        <div class="input-field">
+            <textarea id="comments" name="comments" class="materialize-textarea"></textarea>
+            <label for="comments">{{ 'Vaše zpráva'|_ }}</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        {% partial '@recaptcha' %}
+    </div>
+
+    <button type="submit" class="btn btn-small btn-round-full btn-minor">
+        {{ 'Odeslat zprávu'|_ }}
+    </button>
+
+</form>

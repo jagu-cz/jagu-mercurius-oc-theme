@@ -1,49 +1,78 @@
 description = "Footer Partial"
+
+[staticMenu]
+code = "main-menu"
+
+[genericForm]
+rules[name] = "required"
+rules[email] = "required|email"
+rules[comments] = "required"
+rules_messages[required] = "Toto pole je povinné"
+rules_messages[email] = "Zadejte platnou e-mailovou adresu"
+messages_success = "Váš dotaz byl odeslán"
+messages_errors = "Během odesílání dotazu došlo k chybě"
+mail_enabled = 1
+mail_subject = "Zpráva z kontaktního formuláře"
+mail_recipients[] = "example@example.com"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 0
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+
+[viewBag]
 ==
 {# Footer Start #}
 <footer>
     <div class="footer">
         <div class="container py-5">
             <div class="row">
+                <!-- quick links -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="widget">
-                        <h4 class="text-capitalize mb-4">Company</h4>
+                        <h4 class="mb-4">{{ this.theme.company_name }}</h4>
                         <ul class="list-unstyled footer-menu lh-35">
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            {% for item in staticMenu.menuItems %}
+                                <li>
+                                    <a href="{{ item.url }}">
+                                        {{ item.title }}
+                                    </a>
+                                </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
+                <!-- quick contact -->
+                <div class="col-lg-3 col-md-6 col-sm-6 ml-auto">
                     <div class="widget">
-                        <h4 class="text-capitalize mb-4">Quick Links</h4>
-                        <ul class="list-unstyled footer-menu lh-35">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="widget">
-                        <h4 class="text-capitalize mb-4">Subscribe Us</h4>
-                        <p>Subscribe to get latest news article and resources </p>
-                        <form action="#" class="sub-form">
-                            <input type="text" class="form-control mb-3" placeholder="Subscribe Now ...">
-                            <a href="#" class="btn btn-main btn-small">subscribe</a>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-3 ml-auto col-sm-6">
-                    <div class="widget">
-                        <div class="logo mb-4">
-                            <h3>Mega<span>kit.</span></h3>
+                        <div class="mb-4">
+                            <h4>{{ this.theme.quick_contact_title|_ }}</h4>
                         </div>
-                        <h6><a href="tel:+23-345-67890">Support@megakit.com</a></h6>
-                        <a href="mailto:support@gmail.com"><span class="text-color h4">+23-456-6588</span></a>
+                        <p>
+                            {{ this.theme.quick_contact_address_company_full_name }}
+                            <br>
+                            {{ this.theme.quick_contact_address_street }}
+                            <br>
+                            {{ this.theme.quick_contact_address_city }}, {{ this.theme.quick_contact_address_zip }}
+                        </p>
+                        <p>
+                            <a href="mailto:{{ this.theme.quick_contact_email }}">
+                                {{ this.theme.quick_contact_email }}
+                            </a>
+                            <br>
+                            <a href="tel:{{ this.theme.quick_contact_phone }}">
+                                {{ this.theme.quick_contact_phone }}
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <!-- contact form -->
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="widget">
+                        <h4 class="mb-4">{{ this.theme.contact_form_title|_ }}</h4>
+                        {% component 'genericForm' %}
                     </div>
                 </div>
             </div>
