@@ -10,7 +10,11 @@ description = "Image bar"
             {% for image in data.images %}
                 <div class="col-lg-2 col-md-3 col-sm-6 d-flex justify-content-center">
                     <a {% if image.link %}href="{{ image.link }}"{% endif %}>
-                        <img src="{{ image.image|media }}" height="{{ data.max_height }}px">
+                        {% if image.image %}
+                            <img src="{{ image.image|media }}" height="{{ data.max_height }}px">
+                        {% else %}
+                            <img src="https://placehold.it/100x100" height="{{ data.max_height }}px">
+                        {% endif %}
                     </a>
                 </div>
             {% endfor %}

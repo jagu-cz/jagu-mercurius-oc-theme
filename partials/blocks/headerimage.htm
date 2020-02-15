@@ -2,7 +2,7 @@ description = "Header image"
 
 [viewBag]
 ==
-<section class="headerimage" style="background-image: url('{{ data.image|media }}')">
+<section class="headerimage" {% if data.image %}style="background-image: url('{{ data.image|media }}')"{% endif %}>
     <div class="container">
         <div class="row">
             <div class="col d-flex {{ data.alignment }}">
