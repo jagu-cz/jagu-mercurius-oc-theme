@@ -1,0 +1,30 @@
+description = "Gallery"
+
+[viewBag]
+==
+<section class="gallery {{ data.margin_top }} {{ data.margin_bottom }}"
+         style="background-color: {{ data.background }};"
+>
+    <div class="{% if data.full_width %}container-fluid{% else %}container{% endif %}">
+        <div class="row portfolio-gallery">
+            {% for image in data.images %}
+                <div class="{{ data.images_per_row }}">
+                    <div class="portfolio-item position-relative mb-4">
+                        {% set imagePath = 'https://placehold.it/600x466' %}
+                        {% if image.image %}
+                            {% set imagePath = image.image|media %}
+                        {% endif %}
+                        <a href="{{ imagePath }}" class="popup-gallery">
+                            <div style="background-image: url('{{ imagePath }}');" class="img-fluid w-100"></div>
+                            <i class="ti-plus overlay-item"></i>
+                            <div class="portfolio-item-content">
+                                <h3 class="mb-0 text-white">{{ image.title }}</h3>
+                                <span class="text-white-50">{{ image.description|raw }}</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

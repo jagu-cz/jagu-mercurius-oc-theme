@@ -218,6 +218,75 @@ banner:
                 'pb-4': Big
                 'pb-5': Bigger
 
+gallery:
+    name: Gallery
+    description: Gallery
+    icon: icon-th
+    fields:
+        section:
+            label: Gallery
+            type: section
+        background:
+            label: Section background color
+            type: colorpicker
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            span: left
+        margin_top:
+            label: Margin top
+            comment: Top margin of button
+            type: balloon-selector
+            span: left
+            options:
+                'pt-0': None
+                'pt-1': Smaller
+                'pt-2': Small
+                'pt-3': Normal
+                'pt-4': Big
+                'pt-5': Bigger
+        margin_bottom:
+            label: Margin bottom
+            comment: Bottom margin of button
+            type: balloon-selector
+            span: right
+            options:
+                'pb-0': None
+                'pb-1': Smaller
+                'pb-2': Small
+                'pb-3': Normal
+                'pb-4': Big
+                'pb-5': Bigger
+        full_width:
+            label: Full width
+            type: switch
+        images_per_row:
+            label: Images per row
+            type: balloon-selector
+            default: 'col-lg-4 col-md-6'
+            options:
+                'col-lg-6 col-md-6': Two images per row
+                'col-lg-4 col-md-6': Three images per row
+                'col-lg-3 col-md-6': Four images per row
+        images:
+            type: repeater
+            prompt: Add image
+            form:
+                fields:
+                    section:
+                        label: Image
+                        type: section
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 300
+                    title:
+                        label: Title
+                        type: text
+                    description:
+                        label: Description
+                        type: richeditor
+                        size: tiny
+
 button:
     name: Button
     description: Button
