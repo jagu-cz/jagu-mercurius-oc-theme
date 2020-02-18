@@ -1,0 +1,31 @@
+description = "Map"
+
+[viewBag]
+==
+<section class="map">
+    <div class="{% if not data.full_width %}container{% endif %}">
+        <div id="map"
+             data-latitude="{{ data.latitude }}"
+             data-longitude="{{ data.longitude }}"
+             data-zoom="{{ data.zoom }}"
+             style="width: 100%; height: {{ data.height }}px;"
+        ></div>
+    </div>
+</section>
+
+<script type="application/javascript">
+    function initMap() {
+        let container = document.getElementById('map');
+
+        let latitude = parseFloat(container.dataset.latitude);
+        let longitude = parseFloat(container.dataset.longitude);
+        let zoom = parseFloat(container.dataset.zoom);
+
+        let position = new google.maps.LatLng(latitude, longitude);
+        let options = {zoom: zoom, center: position};
+        let map = new google.maps.Map(container, options);
+        let marker = new google.maps.Marker({position: position});
+
+        marker.setMap(map);
+    }
+</script>

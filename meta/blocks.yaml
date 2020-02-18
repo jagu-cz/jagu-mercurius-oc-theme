@@ -577,3 +577,33 @@ serviceslist:
                                 service:
                                     label: Service
                                     type: text
+
+map:
+    name: Map
+    description: Embed Google map
+    icon: icon-map-marker
+    fields:
+        section:
+            label: Map
+            type: section
+        latitude:
+            label: Latitude
+            type: number
+            span: left
+        longitude:
+            label: Longitude
+            type: number
+            span: right
+        zoom:
+            label: Zoom
+            type: number
+            default: 7
+            span: left
+        height:
+            label: Height
+            type: number
+            default: 400
+            span: right
+        full_width:
+            label: Full width
+            type: switch

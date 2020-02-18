@@ -2,7 +2,7 @@ tabs:
     fields:
 
         ####################################################
-        # Colors
+        # General
         ####################################################
 
         general_section:
@@ -237,4 +237,17 @@ tabs:
         contact_form_title:
             tab: Contact form
             label: Title
+            type: text
+
+        ####################################################
+        # Google Maps API
+        ####################################################
+
+        gmap_section:
+            tab: Google Maps API
+            label: Google Maps API
+            type: section
+        gmap_api_key:
+            tab: Google Maps API
+            label: API key
             type: text

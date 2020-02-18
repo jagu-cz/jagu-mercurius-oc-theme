@@ -13,7 +13,12 @@ description = "Essential Scripts"
     'assets/plugins/slick-carousel/slick/slick.min.js',
     'assets/plugins/counterup/jquery.waypoints.min.js',
     'assets/plugins/counterup/jquery.counterup.min.js',
-    'assets/plugins/google-map/map.js',
     'assets/js/script.js',
     'assets/materialize/js/materialize.min.js'
 ]|theme }}"></script>
+
+{# Google maps #}
+<script src="https://maps.googleapis.com/maps/api/js?key={{ this.theme.gmap_api_key }}&callback=initMap"
+        async
+        defer
+></script>
