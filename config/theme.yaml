@@ -154,6 +154,23 @@ tabs:
             tab: Footer
             label: Footer
             type: section
+        footer_title:
+            tab: Footer
+            label: Title
+            type: text
+        footer_description:
+            tab: Footer
+            label: Title
+            type: richeditor
+            size: small
+        contact_form_section:
+            tab: Footer
+            label: Footer contact form
+            type: section
+        contact_form_title:
+            tab: Footer
+            label: Contact form title
+            type: text
         footer_rounded_button:
             tab: Footer
             label: Rounded button in footer contact form
@@ -229,19 +246,6 @@ tabs:
             label: Phone
             type: text
             span: right
-
-        ####################################################
-        # Contact form
-        ####################################################
-
-        contact_form_section:
-            tab: Contact form
-            label: Contact form
-            type: section
-        contact_form_title:
-            tab: Contact form
-            label: Title
-            type: text
 
         ####################################################
         # Google Maps API

@@ -29,11 +29,18 @@ recaptcha_size = "normal"
     <div class="footer">
         <div class="container py-5">
             <div class="row">
-                <!-- quick links -->
+                <!-- custom text -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="widget">
+                        <h4 class="mb-4">{{ this.theme.footer_title }}</h4>
+                        <span>{{ this.theme.footer_description|raw }}</span>
+                    </div>
+                </div>
+                <!-- quick links -->
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="widget">
                         <h4 class="mb-4">{{ this.theme.company_name }}</h4>
-                        <ul class="list-unstyled footer-menu lh-35">
+                        <ul class="list-unstyled lh-35">
                             {% for item in staticMenu.menuItems %}
                                 <li>
                                     <a href="{{ item.url }}">
@@ -47,9 +54,7 @@ recaptcha_size = "normal"
                 <!-- quick contact -->
                 <div class="col-lg-3 col-md-6 col-sm-6 ml-auto">
                     <div class="widget">
-                        <div class="mb-4">
-                            <h4>{{ this.theme.quick_contact_title|_ }}</h4>
-                        </div>
+                        <h4 class="mb-4">{{ this.theme.quick_contact_title|_ }}</h4>
                         <p>
                             {{ this.theme.quick_contact_address_company_full_name }}
                             <br>
@@ -69,7 +74,7 @@ recaptcha_size = "normal"
                     </div>
                 </div>
                 <!-- contact form -->
-                <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="widget">
                         <h4 class="mb-4">{{ this.theme.contact_form_title|_ }}</h4>
                         {% component 'genericForm' %}
