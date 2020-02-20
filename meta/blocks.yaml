@@ -191,11 +191,33 @@ banner:
         rounded_button:
             label: Rounded button
             type: switch
+        background_type:
+            label: Background type
+            type: balloon-selector
+            default: image
+            options:
+                image: Image
+                color: Color
         background_image:
             label: Background image
             type: mediafinder
             mode: image
             imageWidth: 300
+            trigger:
+                action: show
+                field: background_type
+                condition: value[image]
+        background_color:
+            label: Background color
+            type: colorpicker
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            trigger:
+                action: show
+                field: background_type
+                condition: value[color]
+        overlay:
+            label: Overlay
+            type: switch
         margin_top:
             label: Margin top
             comment: Top margin of the section
