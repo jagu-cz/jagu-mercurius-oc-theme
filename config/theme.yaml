@@ -154,6 +154,10 @@ tabs:
             tab: Footer
             label: Footer
             type: section
+        footer_rounded_button:
+            tab: Footer
+            label: Rounded button in footer contact form
+            type: switch
 
         ####################################################
         # Social media

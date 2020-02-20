@@ -35,7 +35,9 @@
         {% partial '@recaptcha' %}
     </div>
 
-    <button type="submit" class="btn btn-small btn-round-full btn-minor">
+    <button type="submit"
+            class="btn btn-small btn-minor {% if this.theme.footer_rounded_button %}btn-round-full{% endif %}"
+    >
         {{ 'Odeslat zprávu'|_ }}
     </button>
 

@@ -188,6 +188,9 @@ banner:
             label: Button link
             type: text
             span: right
+        rounded_button:
+            label: Rounded button
+            type: switch
         background_image:
             label: Background image
             type: mediafinder
@@ -448,6 +451,9 @@ cards:
                         label: Button link
                         type: text
                         span: right
+                    rounded_button:
+                        label: Rounded button
+                        type: switch
 
 imagebar:
     name: Image bar
