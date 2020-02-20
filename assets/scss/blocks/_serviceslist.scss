@@ -1,7 +1,6 @@
 .serviceslist {
     .service-item {
         position: relative;
-        // padding-left: 80px;
 
         .service-item-image {
             width: 80px;
@@ -12,7 +11,10 @@
 
         ul {
             list-style: none;
-            margin-left: 90px;
+
+            &.with-image {
+                margin-left: 90px;
+            }
 
             li {
                 color: $black;
