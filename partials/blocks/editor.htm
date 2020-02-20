@@ -9,7 +9,21 @@ description = "Editor"
                 {% set size = 'col-lg-12 col-md-12' %}
                 {% if editor.size %}{% set size = editor.size %}{% endif %}
                 <div class="{{ size }}">
-                    {{ editor.editor|raw }}
+                    {% if editor.content_type == 'editor' %}
+                        {{ editor.editor|raw }}
+                    {% elseif editor.content_type == 'dl' %}
+                        <dl class="row">
+                            {% for item in editor.description_list %}
+                                <dt class="col-sm-5 {{ item.alignment }}">
+                                    {% if item.icon %}<i class="{{ item.icon }}"></i>{% endif %}
+                                    {{ item.title }}
+                                </dt>
+                                <dd class="col-sm-7">
+                                    {{ item.text|raw }}
+                                </dd>
+                            {% endfor %}
+                        </dl>
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>
