@@ -13,6 +13,11 @@ tabs:
             tab: General
             label: Company name
             type: text
+        favicon:
+            tab: General
+            label: Favicon
+            type: mediafinder
+            mode: image
 
         ####################################################
         # Colors

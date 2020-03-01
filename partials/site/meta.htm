@@ -16,7 +16,7 @@ description = "Meta Partial"
 <title>{{ this.page.meta_title|default(this.page.title) }} - {{ this.theme.company_name }}</title>
 
 {# Favicon #}
-<link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+<link rel="icon" type="image/png" href="{{ this.theme.favicon|media }}">
 
 {# CSS #}
 <link href="{{ [
