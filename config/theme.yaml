@@ -159,10 +159,30 @@ tabs:
             tab: Footer
             label: Footer
             type: section
-        footer_title:
+        footer_title_type:
             tab: Footer
-            label: Title
+            label: Title type
+            type: balloon-selector
+            options:
+                text: Text
+                image: Image
+        footer_title_text:
+            tab: Footer
+            label: Title text
             type: text
+            trigger:
+                action: show
+                field: footer_title_type
+                condition: value[text]
+        footer_title_image:
+            tab: Footer
+            label: Title image
+            type: mediafinder
+            mode: image
+            trigger:
+                action: show
+                field: footer_title_type
+                condition: value[image]
         footer_description:
             tab: Footer
             label: Title
