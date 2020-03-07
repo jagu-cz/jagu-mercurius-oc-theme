@@ -18,6 +18,9 @@ headerimage:
             label: Description
             type: richeditor
             size: small
+        button_section:
+            label: Button
+            type: section
         button_text:
             label: Button text
             type: text
@@ -26,6 +29,22 @@ headerimage:
             label: Button link
             type: text
             span: right
+        rounded_button:
+            label: Rounded button
+            type: switch
+            span: left
+        button_size:
+            label: Button size
+            type: balloon-selector
+            span: right
+            default: ''
+            options:
+                btn-small: Small
+                '': Normal
+                btn-large: Large
+        appearance_section:
+            label: Appearance
+            type: section
         width:
             label: Width of text block
             comment: In percent
@@ -64,14 +83,9 @@ headerimage:
                 'mb-3': Normal
                 'mb-4': Big
                 'mb-5': Bigger
-        rounded_button:
-            label: Rounded button
-            type: switch
-            span: left
         top_line:
             label: Show top line
             type: switch
-            span: right
 
 editor:
     name: Editor
@@ -88,7 +102,7 @@ editor:
             span: left
         margin_top:
             label: Margin top
-            comment: Top margin of button
+            comment: Top margin of editor
             type: balloon-selector
             span: left
             options:
@@ -100,7 +114,7 @@ editor:
                 'pt-5': Bigger
         margin_bottom:
             label: Margin bottom
-            comment: Bottom margin of button
+            comment: Bottom margin of editor
             type: balloon-selector
             span: right
             options:
@@ -226,9 +240,19 @@ banner:
             label: Button link
             type: text
             span: right
+        button_size:
+            label: Button size
+            type: balloon-selector
+            span: left
+            default: ''
+            options:
+                btn-small: Small
+                '': Normal
+                btn-large: Large
         rounded_button:
             label: Rounded button
             type: switch
+            span: right
         background_type:
             label: Background type
             type: balloon-selector
@@ -383,9 +407,9 @@ button:
             type: balloon-selector
             span: left
             options:
-                'btn-sm': Small
+                'btn-small': Small
                 '': Normal
-                'btn-lg': Big
+                'btn-large': Big
         alignment:
             label: Alignment
             type: balloon-selector
@@ -511,9 +535,19 @@ cards:
                         label: Button link
                         type: text
                         span: right
+                    button_size:
+                        label: Button size
+                        type: balloon-selector
+                        span: left
+                        default: ''
+                        options:
+                            btn-small: Small
+                            '': Normal
+                            btn-large: Large
                     rounded_button:
                         label: Rounded button
                         type: switch
+                        span: right
 
 imagebar:
     name: Image bar

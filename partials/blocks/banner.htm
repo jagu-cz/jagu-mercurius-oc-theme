@@ -22,7 +22,7 @@ description = "Banner"
                 </div>
                 <div class="col-lg-4">
                     <a href="{{ data.button_link }}"
-                       class="btn {% if data.appearance == 'primary' %}btn-main{% else %}btn-minor{% endif %} {% if data.rounded_button %}btn-round-full{% endif %} float-lg-right float-md-right float-sm-right"
+                       class="btn {{ data.button_size }} {% if data.appearance == 'primary' %}btn-main{% else %}btn-minor{% endif %} {% if data.rounded_button %}btn-round-full{% endif %} float-lg-right float-md-right float-sm-right"
                     >
                         {{ data.button_text }}
                     </a>

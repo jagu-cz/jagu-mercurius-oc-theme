@@ -28,7 +28,7 @@ description = "Cards"
 
                             {% if card.button_link and card.button_text %}
                                 <a href="{{ card.button_link }}"
-                                   class="btn btn-small {% if card.rounded_button %}btn-round-full{% endif %} btn-main"
+                                   class="btn {{ card.button_size }} {% if card.rounded_button %}btn-round-full{% endif %} btn-main"
                                 >
                                     {{ card.button_text }}
                                 </a>

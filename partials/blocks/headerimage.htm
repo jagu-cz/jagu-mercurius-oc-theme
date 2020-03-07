@@ -13,7 +13,7 @@ description = "Header image"
                     <span>{{ data.description|raw }}</span>
                     {% if data.button_text and data.button_link %}
                         <a href="{{ data.button_link }}"
-                           class="btn btn-minor {% if data.rounded_button %}btn-round-full{% endif %}"
+                           class="btn {{ data.button_size }} btn-minor {% if data.rounded_button %}btn-round-full{% endif %}"
                         >
                             {{ data.button_text }}
                             <i class="btn-icon fa fa-angle-right ml-2"></i>

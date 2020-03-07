@@ -176,10 +176,21 @@ tabs:
             tab: Footer
             label: Contact form title
             type: text
+        footer_button_size:
+            tab: Footer
+            label: Button size
+            type: balloon-selector
+            span: left
+            default: ''
+            options:
+                btn-small: Small
+                '': Normal
+                btn-large: Large
         footer_rounded_button:
             tab: Footer
             label: Rounded button in footer contact form
             type: switch
+            span: right
 
         ####################################################
         # Social media

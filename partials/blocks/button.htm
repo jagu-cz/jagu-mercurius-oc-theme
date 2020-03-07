@@ -5,7 +5,7 @@ description = "Button"
 <section class="button" style="background-color: {{ data.background }}">
     <div class="container d-flex {{ data.alignment }}">
         <a role="button"
-           class="btn {% if data.rounded %}btn-round-full{% endif %} {{ data.size }} {{ data.appearance }} {{ data.margin_top }} {{ data.margin_bottom }}"
+           class="btn {{ data.size }} {% if data.rounded %}btn-round-full{% endif %} {{ data.appearance }} {{ data.margin_top }} {{ data.margin_bottom }}"
            href="{{ data.link }}"
         >
             {% if data.icon %}
