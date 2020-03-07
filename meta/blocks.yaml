@@ -19,6 +19,10 @@ headerimage:
             type: richeditor
             toolbarButtons: fullscreen|bold|italic|underline|strikeThrough|subscript|superscript|fontSize|color|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertImage|insertTable|undo|redo|html
             size: small
+        min_height:
+            label: Minimal height
+            type: number
+            comment: In pixels
         button_section:
             label: Button
             type: section

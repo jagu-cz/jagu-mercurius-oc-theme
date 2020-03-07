@@ -4,23 +4,25 @@ description = "Header image"
 ==
 <section class="headerimage" {% if data.image %}style="background-image: url('{{ data.image|media }}')"{% endif %}>
     <div class="container">
-        <div class="row">
-            <div class="col d-flex {{ data.alignment }}">
-                <div class="block p-4 {{ data.margin_top }} {{ data.margin_bottom }} {% if data.top_line %}top-line{% endif %}"
-                     style="width: {{ data.width }}%"
-                >
-                    <h1 class="mb-3">{{ data.title }}</h1>
-                    <span>{{ data.description|raw }}</span>
-                    {% if data.button_text and data.button_link %}
-                        <a href="{{ data.button_link }}"
-                           class="btn {{ data.button_size }} btn-minor {% if data.rounded_button %}btn-round-full{% endif %}"
-                        >
-                            {{ data.button_text }}
-                            <i class="btn-icon fa fa-angle-right ml-2"></i>
-                        </a>
-                    {% endif %}
+        <div class="row" style="min-height: {{ data.min_height }}px">
+            {% if data.title or data.description or data.button_text or data.button_link %}
+                <div class="col d-flex {{ data.alignment }}">
+                    <div class="block p-4 {{ data.margin_top }} {{ data.margin_bottom }} {% if data.top_line %}top-line{% endif %}"
+                         style="width: {{ data.width }}%"
+                    >
+                        <h1 class="mb-3">{{ data.title }}</h1>
+                        <span>{{ data.description|raw }}</span>
+                        {% if data.button_text and data.button_link %}
+                            <a href="{{ data.button_link }}"
+                               class="btn {{ data.button_size }} btn-minor {% if data.rounded_button %}btn-round-full{% endif %}"
+                            >
+                                {{ data.button_text }}
+                                <i class="btn-icon fa fa-angle-right ml-2"></i>
+                            </a>
+                        {% endif %}
+                    </div>
                 </div>
-            </div>
+            {% endif %}
         </div>
     </div>
 </section>
