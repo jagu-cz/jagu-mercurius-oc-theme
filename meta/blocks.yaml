@@ -216,6 +216,11 @@ banners:
                     title:
                         label: Title
                         type: text
+                        span: left
+                    link:
+                        label: Link
+                        type: text
+                        span: right
                     description:
                         label: Description
                         type: richeditor

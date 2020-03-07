@@ -39,4 +39,14 @@
             margin-bottom: 0;
         }
     }
+
+    .col {
+        a {
+            &:hover {
+                h5, p {
+                    color: darken($light, 15%);
+                }
+            }
+        }
+    }
 }
