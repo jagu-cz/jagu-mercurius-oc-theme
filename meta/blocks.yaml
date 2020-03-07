@@ -17,6 +17,7 @@ headerimage:
         description:
             label: Description
             type: richeditor
+            toolbarButtons: fullscreen|bold|italic|underline|strikeThrough|subscript|superscript|fontSize|color|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertImage|insertTable|undo|redo|html
             size: small
         button_section:
             label: Button
@@ -152,6 +153,7 @@ editor:
                     editor:
                         label: Editor
                         type: richeditor
+                        toolbarButtons: fullscreen|bold|italic|underline|strikeThrough|subscript|superscript|fontSize|color|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertImage|insertTable|undo|redo|html
                         size: large
                         span: full
                         trigger:
@@ -179,6 +181,7 @@ editor:
                                 text:
                                     label: Icon
                                     type: richeditor
+                                    toolbarButtons: fullscreen|bold|italic|underline|strikeThrough|subscript|superscript|fontSize|color|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertImage|insertTable|undo|redo|html
                                     size: small
                                 alignment:
                                     label: Alignment
@@ -212,6 +215,7 @@ banners:
                     description:
                         label: Description
                         type: richeditor
+                        toolbarButtons: fullscreen|bold|italic|underline|strikeThrough|subscript|superscript|fontSize|color|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertImage|insertTable|undo|redo|html
                         size: small
 
 banner:
@@ -377,6 +381,7 @@ gallery:
                     description:
                         label: Description
                         type: richeditor
+                        toolbarButtons: fullscreen|bold|italic|underline|strikeThrough|subscript|superscript|fontSize|color|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertImage|insertTable|undo|redo|html
                         size: tiny
 
 button:
@@ -526,6 +531,7 @@ cards:
                     description:
                         label: Description
                         type: richeditor
+                        toolbarButtons: fullscreen|bold|italic|underline|strikeThrough|subscript|superscript|fontSize|color|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertImage|insertTable|undo|redo|html
                         size: small
                     image:
                         label: Image

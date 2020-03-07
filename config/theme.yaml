@@ -187,6 +187,7 @@ tabs:
             tab: Footer
             label: Title
             type: richeditor
+            toolbarButtons: fullscreen|bold|italic|underline|strikeThrough|subscript|superscript|fontSize|color|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertImage|insertTable|undo|redo|html
             size: small
         contact_form_section:
             tab: Footer
