@@ -566,6 +566,12 @@ cards:
             label: Background color
             type: colorpicker
             availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            span: left
+        char_limit:
+            label: Characters limit
+            type: number
+            span: right
+            default: 150
         margin_top:
             label: Margin top
             comment: Top margin of button
@@ -622,8 +628,7 @@ cards:
                         span: right
                     description:
                         label: Description
-                        type: richeditor
-                        toolbarButtons: fullscreen|bold|italic|underline|strikeThrough|subscript|superscript|fontSize|color|paragraphFormat|align|formatOL|formatUL|outdent|indent|quote|insertHR|insertLink|insertImage|insertTable|undo|redo|html
+                        type: textarea
                         size: small
                     image:
                         label: Image

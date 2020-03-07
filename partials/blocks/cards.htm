@@ -23,9 +23,12 @@ description = "Cards"
                             {% endif %}
 
                             {% if card.description %}
-                                <span class="card-text">{{ card.description|raw }}</span>
+                                <span class="card-text">
+                                {{ card.description|length > data.char_limit ? card.description|slice(0, data.char_limit) ~ '...' : card.description  }}
+                                </span>
                             {% endif %}
-
+                        </div>
+                        <div class="card-footer">
                             {% if card.button_link and card.button_text %}
                                 <a href="{{ card.button_link }}"
                                    class="btn {{ card.button_size }} {% if card.rounded_button %}btn-round-full{% endif %} btn-main"
