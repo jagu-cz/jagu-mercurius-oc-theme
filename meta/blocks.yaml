@@ -228,6 +228,9 @@ banner:
             options:
                 'primary': Primary color
                 'secondary': Secondary color
+        full_width:
+            label: Full-width
+            type: switch
         secondary_text:
             label: Secondary text
             type: text
