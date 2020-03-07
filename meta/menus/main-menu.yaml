@@ -1,11 +1,22 @@
 name: 'Main menu'
 items:
     -
-        title: Home
+        title: Homepage
         nesting: '0'
         type: static-page
         code: ''
         reference: index
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Contact
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: kontakt
         replace: '0'
         viewBag:
             isHidden: '0'

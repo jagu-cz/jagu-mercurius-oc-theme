@@ -1,3 +1,86 @@
+pagetitle:
+    name: Page title
+    description: Page title with optional image
+    icon: icon-font
+    fields:
+        section_title:
+            label: Page title
+            type: section
+        title:
+            label: Title
+            type: text
+        color:
+            label: Title color
+            type: colorpicker
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+        alignment:
+            label: Alignment
+            type: balloon-selector
+            options:
+                'text-left': Left
+                'text-center': Center
+                'text-right': Right
+        margin_top:
+            label: Top Margin
+            comment: Top margin of block
+            type: balloon-selector
+            span: left
+            options:
+                'pt-0': None
+                'pt-1': Smaller
+                'pt-2': Small
+                'pt-3': Normal
+                'pt-4': Big
+                'pt-5': Bigger
+        margin_bottom:
+            label: Bottom Margin
+            comment: Bottom margin of text block
+            type: balloon-selector
+            span: right
+            options:
+                'pb-0': None
+                'pb-1': Smaller
+                'pb-2': Small
+                'pb-3': Normal
+                'pb-4': Big
+                'pb-5': Bigger
+        section_background:
+            label: Background
+            type: section
+        background_type:
+            label: Background type
+            type: balloon-selector
+            options:
+                image: Image
+                color: Color
+        background_color:
+            label: Background color
+            type: colorpicker
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            trigger:
+                action: show
+                field: background_type
+                condition: value[color]
+        background_image:
+            label: Background image
+            type: mediafinder
+            mode: image
+            trigger:
+                action: show
+                field: background_type
+                condition: value[image]
+        overlay:
+            label: Overlay
+            type: balloon-selector
+            options:
+                '': No overlay
+                overlay-primary: Primary color
+                overlay-secondary: Secondary color
+            trigger:
+                action: show
+                field: background_type
+                condition: value[image]
+
 headerimage:
     name: Header image
     description: Header image with big background image and leading text

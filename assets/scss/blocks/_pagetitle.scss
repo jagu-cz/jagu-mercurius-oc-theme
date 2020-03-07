@@ -1,0 +1,33 @@
+.pagetitle {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    .overlay-primary, .overlay-secondary {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .75;
+        }
+
+        &.overlay-primary {
+            &:before {
+                background-color: $primary-color;
+            }
+        }
+
+        &.overlay-secondary {
+            &:before {
+                background-color: $secondary-color;
+            }
+        }
+    }
+}
