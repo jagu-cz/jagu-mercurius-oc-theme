@@ -21,11 +21,13 @@ description = "Banner"
                     <h2 class="mt-2 text-white">{{ data.primary_text }}</h2>
                 </div>
                 <div class="col-lg-4">
-                    <a href="{{ data.button_link }}"
-                       class="btn {{ data.button_size }} {% if data.appearance == 'primary' %}btn-main{% else %}btn-minor{% endif %} {% if data.rounded_button %}btn-round-full{% endif %} float-lg-right float-md-right float-sm-right"
-                    >
-                        {{ data.button_text }}
-                    </a>
+                    {% if data.button_text %}
+                        <a href="{{ data.button_link }}"
+                           class="btn {{ data.button_size }} {% if data.appearance == 'primary' %}btn-main{% else %}btn-minor{% endif %} {% if data.rounded_button %}btn-round-full{% endif %} float-lg-right float-md-right float-sm-right"
+                        >
+                            {{ data.button_text }}
+                        </a>
+                    {% endif %}
                 </div>
             </div>
         </div>
