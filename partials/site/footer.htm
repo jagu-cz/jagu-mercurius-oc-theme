@@ -35,7 +35,7 @@ recaptcha_size = "normal"
                         {% if this.theme.footer_title_type == 'text' %}
                             <h4 class="mb-4">{{ this.theme.footer_title_text }}</h4>
                         {% elseif this.theme.footer_title_type == 'image' %}
-                            <img class="mb-4" height="50" src="{{ this.theme.footer_title_image|media }}"/>
+                            <img class="mb-4 w-100" src="{{ this.theme.footer_title_image|media }}"/>
                         {% endif %}
                         <span>{{ this.theme.footer_description|raw }}</span>
                     </div>
