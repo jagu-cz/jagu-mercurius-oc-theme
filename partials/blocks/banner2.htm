@@ -1,0 +1,25 @@
+description = "Banner 2"
+
+[viewBag]
+==
+<section class="banner2 {{ data.margin_top }} {{ data.margin_bottom }}"
+         style="background-color: {{ data.background_color }}"
+>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-7">
+                <h2 class="mb-0" style="color: {{ data.text_color }};">{{ data.text }}</h2>
+            </div>
+            <div class="col-lg-4">
+                {% if data.button_text %}
+                    <a href="{{ data.button_link }}"
+                       class="btn {{ data.button_size }} {% if data.rounded_button %}btn-round-full{% endif %} float-lg-right float-md-right float-sm-right"
+                       style="background-color: {{ data.button_background_color }}; color: {{ data.button_text_color }}"
+                    >
+                        {{ data.button_text }}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
