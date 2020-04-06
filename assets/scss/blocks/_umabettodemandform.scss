@@ -1,0 +1,55 @@
+.umabetto-demand-form {
+    .materialize {
+        input[type=text]:not(.browser-default),
+        textarea.materialize-textarea {
+            &:focus:not([readonly]) {
+                border-bottom: 1px solid $secondary-color;
+                -webkit-box-shadow: 0 1px 0 0 $secondary-color;
+                box-shadow: 0 1px 0 0 $secondary-color;
+
+                + label {
+                    color: $secondary-color;
+                }
+            }
+        }
+
+        input[type=checkbox] {
+            &.filled-in {
+                &:checked {
+                    + span {
+                        &:not(.lever) {
+                            &:after {
+                                border-color: $secondary-color;
+                                background-color: $secondary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .input-field label.required:after,
+        label.checkbox-label.required:after {
+            content: '*';
+            color: red;
+            display: inline-block;
+            opacity: 100;
+            position: relative;
+            margin-left: .3rem;
+            font-size: 12pt;
+        }
+
+        label.checkbox-label {
+            span {
+                a {
+                    color: $secondary-color;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

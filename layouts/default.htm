@@ -1,21 +1,83 @@
 description = "Default layout"
 
+[viewBag]
+
 [staticPage]
 useContent = 0
 default = 1
+
+[emptyForm umabettoDemandForm]
+rules[first_name] = "required"
+rules[last_name] = "required"
+rules[email] = "required|email"
+rules[phone] = "required"
+rules[address] = "required"
+rules[service] = "required"
+rules[comment] = "required"
+rules[consent] = "required"
+rules_messages[first_name.required] = "Pole \"vaše jméno\" je povinné"
+rules_messages[last_name.required] = "Pole \"vaše příjmení\" je povinné"
+rules_messages[email.required] = "Pole \"váš e-mail\" je povinné"
+rules_messages[phone.required] = "Pole \"váš telefon\" je povinné"
+rules_messages[address.required] = "Pole \"adresa realizace\" je povinné"
+rules_messages[service.required] = "Pole \"poptávaná služba\" je povinné"
+rules_messages[comment.required] = "Pole \"vaše poptávka\" je povinné"
+rules_messages[consent.required] = "Souhlas se zpracováním osobních údajů musí být zaškrtnutý"
+rules_messages[email] = "Zadaná e-mailová adresa není platná"
+messages_success = "Váš dotaz byl odeslán"
+messages_errors = "Během odesílání dotazu došlo k chybě"
+mail_enabled = 1
+mail_subject = "Zpráva z kontaktního formuláře"
+mail_recipients[] = "example@example.com"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 0
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+
+[emptyForm footerForm]
+rules[name] = "required"
+rules[email] = "required|email"
+rules[comments] = "required"
+rules_messages[name.required] = "Pole \"vaše jméno\" je povinné"
+rules_messages[email.required] = "Pole \"váš e-mail\" je povinné"
+rules_messages[comments.required] = "Pole \"vaše zpráva\" je povinné"
+rules_messages[email] = "Zadaná e-mailová adresa není platná"
+messages_success = "Váš dotaz byl odeslán"
+messages_errors = "Během odesílání dotazu došlo k chybě"
+mail_enabled = 1
+mail_subject = "Zpráva z kontaktního formuláře"
+mail_recipients[] = "example@example.com"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 0
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+
+[localePicker]
+forceUrl = 0
 ==
 {##}
 <!doctype html>
-<html lang="en">
+<html lang="{{ localePicker.activeLocale }}">
 <head>
     {% partial 'site/meta.htm' %}
 </head>
 
 <body>
 {% partial 'site/header.htm' %}
+
+{% flash %}
+    <p data-control="flash-message" data-interval="5" class="{{ type }}">{{ message }}</p>
+{% endflash %}
+
 <div class="main-wrapper">
     {repeater name="sections" groups="~/themes/jagu-mercurius-jagu-oc-theme/meta/blocks.yaml" tab="Blocks"}
-        {variable name="_dummy" type="text"}{/variable}
+    {variable name="_dummy" type="text"}{/variable}
     {/repeater}
     {% for section in sections %}
         {% partial 'blocks/' ~ section._group data=section %}

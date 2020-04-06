@@ -9,8 +9,11 @@
         }
     }
 
+
     h4 {
-        color: $footer-text-color;
+        &.footer-text-color {
+            color: $footer-text-color;
+        }
     }
 
     a {

@@ -863,6 +863,18 @@ serviceslist:
                                     label: Service
                                     type: text
 
+umabettodemandform:
+    name: Umabetto demand form
+    description: Umbaetto demand form
+    icon: icon-question
+    fields:
+        section:
+            label: Umabetto demand form
+            type: section
+        consent_link:
+            label: Consent link
+            type: text
+
 map:
     name: Map
     description: Embed Google map

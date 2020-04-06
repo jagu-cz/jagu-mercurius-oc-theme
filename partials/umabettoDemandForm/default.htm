@@ -1,0 +1,94 @@
+<form data-request="{{ __SELF__ }}::onFormSubmit">
+
+    {{ form_token() }}
+
+    <div id="{{ __SELF__ }}_forms_flash"></div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="materialize">
+                <div class="input-field">
+                    <input id="first_name" name="first_name" type="text">
+                    <label for="first_name" class="required">{{ 'Vaše jméno'|_ }}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="materialize">
+                <div class="input-field">
+                    <input id="last_name" name="last_name" type="text">
+                    <label for="last_name" class="required">{{ 'Vaše příjmení'|_ }}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="materialize">
+                <div class="input-field">
+                    <input id="email" name="email" type="text">
+                    <label for="email" class="required">{{ 'Váč e-mail'|_ }}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="materialize">
+                <div class="input-field">
+                    <input id="phone" name="phone" type="text">
+                    <label for="phone" class="required">{{ 'Váš telefon'|_ }}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="materialize">
+                <div class="input-field">
+                    <input id="address" name="address" type="text">
+                    <label for="address" class="required">{{ 'Adresa realizace'|_ }}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="materialize">
+                <div class="input-field">
+                    <input id="service" name="service" type="text">
+                    <label for="service" class="required">{{ 'Poptávaná služba'|_ }}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="materialize">
+                <div class="input-field">
+                    <textarea id="comment" name="comment" class="materialize-textarea"></textarea>
+                    <label for="comment" class="required">
+                        {{ 'Vaše poptávka, detailní popis požadovaných prací ...'|_ }}
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="materialize">
+                <label class="required checkbox-label" for="consent">
+                    <input id="consent" name="consent" type="checkbox" class="filled-in"/>
+                    <span>
+                        {{ 'Souhlas se zpracováním'|_ }}
+                        <a href="{{ data.consent_link }}">{{ 'osobních údajů'|_ }}</a>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        {% partial '@recaptcha' %}
+    </div>
+
+    <button type="submit" class="btn btn-large btn-minor">
+        {{ 'Odeslat poptávku'|_ }}
+    </button>
+
+</form>
