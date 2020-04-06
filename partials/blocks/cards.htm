@@ -11,7 +11,7 @@ description = "Cards"
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
                     <div class="card h-100 {% if data.bottom_line %}bottom-line{% endif %}">
                         <div class="card-img-top"
-                             style="{% if card.image %}background-image: url('{{ card.image|media }}');{% endif %} padding-bottom: {{ data.aspect_ratio }}"
+                             style="{% if card.image %}background-image: url('{{ card.image|media|resize(500) }}');{% endif %} padding-bottom: {{ data.aspect_ratio }}"
                         ></div>
                         <div class="card-body">
                             {% if card.title %}
