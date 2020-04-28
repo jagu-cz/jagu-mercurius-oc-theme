@@ -26,8 +26,8 @@ $constant: 3;
             letter-spacing: 1px;
         }
 
-        @include mobile {
-            width: 100%;
+        @include tablet {
+            width: 100% !important;
         }
 
         &.top-line {
