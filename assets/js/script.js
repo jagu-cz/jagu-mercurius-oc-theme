@@ -16,4 +16,9 @@
         delay: 10,
         time: 1000
     });
+
+    // init Materialize CSS select
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
 })(jQuery);

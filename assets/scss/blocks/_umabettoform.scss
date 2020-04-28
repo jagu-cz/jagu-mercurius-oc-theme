@@ -1,14 +1,26 @@
-.umabetto-demand-form {
+.umabetto-demand-form, .umabetto-applicants-form {
     .materialize {
+        .select-wrapper input.select-dropdown,
         input[type=text]:not(.browser-default),
         textarea.materialize-textarea {
-            &:focus:not([readonly]) {
+            &:focus {
                 border-bottom: 1px solid $secondary-color;
                 -webkit-box-shadow: 0 1px 0 0 $secondary-color;
                 box-shadow: 0 1px 0 0 $secondary-color;
 
                 + label {
                     color: $secondary-color;
+                }
+            }
+        }
+
+        [type="checkbox"] {
+            &:checked {
+                + span:not(.lever) {
+                    &:before {
+                        border-right: 2px solid $secondary-color;
+                        border-bottom: 2px solid $secondary-color;
+                    }
                 }
             }
         }

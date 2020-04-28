@@ -875,6 +875,18 @@ umabettodemandform:
             label: Consent link
             type: text
 
+umabettoapplicantsform:
+    name: Umabetto applicants form
+    description: Umbaetto applicants form
+    icon: icon-question
+    fields:
+        section:
+            label: Umabetto applicants form
+            type: section
+        consent_link:
+            label: Consent link
+            type: text
+
 map:
     name: Map
     description: Embed Google map

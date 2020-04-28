@@ -6,6 +6,33 @@ description = "Default layout"
 useContent = 0
 default = 1
 
+[emptyForm umabettoApplicantsForm]
+rules[first_name] = "required"
+rules[last_name] = "required"
+rules[email] = "required|email"
+rules[phone] = "required"
+rules[comment] = "required"
+rules[professions] = "required"
+rules_messages[first_name.required] = "Pole \"vaše jméno\" je povinné"
+rules_messages[last_name.required] = "Pole \"vaše příjmení\" je povinné"
+rules_messages[email.required] = "Pole \"váš e-mail\" je povinné"
+rules_messages[email.email] = "Zadaná e-mailová adresa není platná"
+rules_messages[phone.required] = "Pole \"váš telefon\" je povinné"
+rules_messages[comment.required] = "Pole \"poznámka\" je povinné"
+rules_messages[professions.required] = "Pole \"profese\" musí mít alespoň jednu položku zaškrtnutou"
+messages_success = "Váš dotaz byl odeslán"
+messages_errors = "Během odesílání dotazu došlo k chybě"
+mail_enabled = 1
+mail_subject = "Zpráva z formuláře pro uchazeče"
+mail_recipients[] = "example@example.com"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 0
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+
 [emptyForm umabettoDemandForm]
 rules[first_name] = "required"
 rules[last_name] = "required"
@@ -27,7 +54,7 @@ rules_messages[email] = "Zadaná e-mailová adresa není platná"
 messages_success = "Váš dotaz byl odeslán"
 messages_errors = "Během odesílání dotazu došlo k chybě"
 mail_enabled = 1
-mail_subject = "Zpráva z kontaktního formuláře"
+mail_subject = "Zpráva z poptávkového formuláře"
 mail_recipients[] = "example@example.com"
 inline_errors = "disabled"
 sanitize_data = "disabled"
