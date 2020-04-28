@@ -807,10 +807,14 @@ serviceslist:
             type: colorpicker
             availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
             span: left
+        color:
+            label: Section text color
+            type: colorpicker
+            availableColors: ['#376FAD', '#265E9C', '#F09125', '#2C2E2C', '#3B3C3D', '#F2F2F2', '#FFFFFF']
+            span: right
         list_bullet_color:
             label: Color of list bullets
             type: balloon-selector
-            span: right
             options:
                 'primary': Primary color
                 'secondary': Secondary color
