@@ -14,12 +14,26 @@
             }
         }
 
+        input.valid[type=text]:not(.browser-default) {
+            border-bottom: 1px solid $secondary-color !important;
+            -webkit-box-shadow: 0 1px 0 0 $secondary-color !important;
+            box-shadow: 0 1px 0 0 $secondary-color !important;
+        }
+
+        .file-upload {
+            .btn {
+                background-color: $secondary-color !important;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+        }
+
         [type="checkbox"] {
             &:checked {
                 + span:not(.lever) {
                     &:before {
-                        border-right: 2px solid $secondary-color !important;
-                        border-bottom: 2px solid $secondary-color !important;
+                        border-right: 2px solid $secondary-color;
+                        border-bottom: 2px solid $secondary-color;
                     }
                 }
             }
@@ -31,8 +45,8 @@
                     + span {
                         &:not(.lever) {
                             &:after {
-                                border-color: $secondary-color !important;
-                                background-color: $secondary-color !important;
+                                border-color: $secondary-color;
+                                background-color: $secondary-color;
                             }
                         }
                     }
