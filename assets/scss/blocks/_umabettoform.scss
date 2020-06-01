@@ -4,12 +4,12 @@
         input[type=text]:not(.browser-default),
         textarea.materialize-textarea {
             &:focus {
-                border-bottom: 1px solid $secondary-color;
-                -webkit-box-shadow: 0 1px 0 0 $secondary-color;
-                box-shadow: 0 1px 0 0 $secondary-color;
+                border-bottom: 1px solid $secondary-color !important;
+                -webkit-box-shadow: 0 1px 0 0 $secondary-color !important;
+                box-shadow: 0 1px 0 0 $secondary-color !important;
 
                 + label {
-                    color: $secondary-color;
+                    color: $secondary-color !important;
                 }
             }
         }
@@ -18,8 +18,8 @@
             &:checked {
                 + span:not(.lever) {
                     &:before {
-                        border-right: 2px solid $secondary-color;
-                        border-bottom: 2px solid $secondary-color;
+                        border-right: 2px solid $secondary-color !important;
+                        border-bottom: 2px solid $secondary-color !important;
                     }
                 }
             }
@@ -31,8 +31,8 @@
                     + span {
                         &:not(.lever) {
                             &:after {
-                                border-color: $secondary-color;
-                                background-color: $secondary-color;
+                                border-color: $secondary-color !important;
+                                background-color: $secondary-color !important;
                             }
                         }
                     }
