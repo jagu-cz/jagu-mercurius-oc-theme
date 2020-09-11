@@ -136,6 +136,14 @@
 
 
 @include tablet {
+    a.navbar-brand {
+        max-width: 60vw;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
     .navbar-toggler {
         color: $light;
     }
