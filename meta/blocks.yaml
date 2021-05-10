@@ -891,6 +891,18 @@ umabettoapplicantsform:
             label: Consent link
             type: text
 
+laoptikareservationform:
+    name: LaOptika reservation form
+    description: LaOptika reservation form
+    icon: icon-question
+    fields:
+        section:
+            label: LaOptika reservation form
+            type: section
+        consent_link:
+            label: Consent link
+            type: text
+
 map:
     name: Map
     description: Embed Google map

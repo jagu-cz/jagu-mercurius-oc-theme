@@ -1,4 +1,4 @@
-.umabetto-demand-form, .umabetto-applicants-form {
+.umabetto-demand-form, .umabetto-applicants-form, .laoptika-reservation-form {
     .materialize {
         .select-wrapper input.select-dropdown,
         input[type=text]:not(.browser-default),
@@ -51,6 +51,59 @@
                         }
                     }
                 }
+            }
+        }
+
+        .datepicker-modal, .timepicker-modal {
+            height: auto;
+        }
+
+        .timepicker-digital-display {
+            background-color: $primary-color;
+        }
+
+        .timepicker-span-hours, .timepicker-span-minutes {
+            &.text-primary {
+                color: $secondary-color !important;
+            }
+        }
+
+        .timepicker-tick.active, .timepicker-tick:hover {
+            background-color: rgba();
+        }
+
+        .timepicker-close {
+            color: $primary-color;
+        }
+
+        .timepicker-canvas line {
+            stroke: $primary-color;
+        }
+
+        .timepicker-canvas-bg,
+        .timepicker-canvas-bearing {
+            fill: $primary-color;
+        }
+
+        .datepicker-date-display {
+            background-color: $primary-color;
+        }
+
+        .datepicker-cancel,
+        .datepicker-clear,
+        .datepicker-today,
+        .datepicker-done {
+            color: $primary-color;
+        }
+
+        .datepicker-table {
+            td.is-today {
+                color: $secondary-color;
+            }
+
+            td.is-selected {
+                color: $secondary-color;
+                background-color: $primary-color;
             }
         }
 
